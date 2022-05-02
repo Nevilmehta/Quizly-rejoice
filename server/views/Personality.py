@@ -11,7 +11,7 @@ from server.models.accounts import (
 
 router = APIRouter()
 
-with open(r'B:/intern/quizly-rejoice/model_pkl' , 'rb') as f:
+with open(r'B:/intern/quizly-rejoice/model.pkl' , 'rb') as f:
     lr = pickle.load(f)
 @router.post("/", response_description="user data added into the database")
 async def add_user_data(user: Personality = Body(...)):
